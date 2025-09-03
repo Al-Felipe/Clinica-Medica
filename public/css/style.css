@@ -1,0 +1,283 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+:root {
+  --brand: #2e86de;
+  --brand-700: #1b5fb1;
+  --ink: #1f2937;
+  --muted: #6b7280;
+  --bg: #f5f7fb;
+  --card: #ffffff;
+  --radius: 16px;
+  --shadow: 0 8px 24px rgba(0,0,0,.08);
+}
+
+* {
+  outline: none;
+}
+
+button {
+  display: block;
+  margin: 0 auto;
+}
+
+body {
+  margin: 0;
+  font-family: 'Montserrat', Arial, sans-serif;
+  background: var(--bg);
+  color: var(--ink);
+}
+
+/* Header */
+header {
+  position: sticky;
+  top: 0;
+  background: #fff;
+  box-shadow: 0 1px 0 rgba(0,0,0,.06);
+  z-index: 50;
+}
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 0;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+.brand-logo {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: var(--brand);
+  display: grid;
+  place-items: center;
+  color: #fff;
+  font-weight: 700;
+}
+.brand-name {
+  font-weight: 700;
+  color: var(--ink);
+}
+nav ul {
+  display: flex;
+  gap: 18px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+nav a {
+  color: var(--ink);
+  text-decoration: none;
+  font-weight: 600;
+}
+nav a:hover {
+  color: var(--brand);
+}
+.cta-small {
+  background: var(--brand);
+  color: #fff;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 10px;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.cta-small:hover {
+  background: var(--brand-700);
+}
+
+/* Hero */
+.hero {
+  background: linear-gradient(180deg,#eef6ff,transparent);
+}
+.hero-wrap {
+  display: grid;
+  grid-template-columns: 1.2fr .8fr;
+  gap: 30px;
+  padding: 40px 0 24px;
+}
+.hero h1 {
+  font-size: clamp(28px,4vw,44px);
+  margin: 10px 0 12px;
+}
+.hero p {
+  color: var(--muted);
+  margin: 0 0 22px;
+}
+.hero-cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.pill {
+  border-radius: 999px;
+  padding: 12px 16px;
+  border: 1px solid #dbeafe;
+  background: #fff;
+  font-weight: 700;
+  cursor: pointer;
+}
+.ill {
+  width: 100%;
+  height: 280px;
+  border-radius: var(--radius);
+  background: radial-gradient(110% 90% at 70% 10%, #c7e0ff 0%, #eaf2ff 45%, #ffffff 100%);
+  box-shadow: var(--shadow);
+}
+img {
+  width: 100%;
+  height: 280px;
+  border-radius: 9px;
+}
+
+/* Cards */
+.section {
+  padding: 32px 0;
+}
+.section h2 {
+  font-size: clamp(22px,3vw,28px);
+  margin: 0 0 16px;
+}
+.muted {
+  color: var(--muted);
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* cards maiores */
+  gap: 20px;
+}
+.card {
+  background: var(--card);
+  border-radius: var(--radius);
+  padding: 24px; /* padding maior */
+  box-shadow: var(--shadow);
+  min-height: 200px; /* altura mínima */
+}
+.card h3 {
+  margin: 6px 0 8px;
+}
+.card p {
+  margin: 0 0 14px;
+  color: var(--muted);
+}
+.btn {
+  background: #2e86de;
+  padding: 10px 12px;
+  border-radius: 10px;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  color: white;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.btn-primary {
+  background: var(--brand);
+  color: #fff;
+}
+.btn-primary:hover {
+  background: var(--brand-700);
+}
+
+/* Sobre Section */
+#sobre {
+  max-width: 800px;
+  margin: 0 auto 40px;
+  padding: 0 16px;
+  text-align: center;
+  color: var(--ink);
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* Formulário Contato */
+#contato {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 80vh;
+  padding: 0 16px;
+}
+
+#formContato {
+  background-color: white;
+  box-shadow: 0 4px 10px rgba(0, 0,0, 0.2);
+  padding: 15px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  width: 100%;
+  max-width: 450px;
+  align-items: center;
+  justify-content: center;
+}
+
+form input, form textarea {
+  padding: 14px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+
+form button {
+  align-self: flex-start;
+  padding: 12px 20px;
+  font-size: 1rem;
+}
+
+.informacao input{
+  padding: 10px;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #1b5fb1;
+  margin-top: 30px;
+  color: black;
+}
+
+footer p {
+  color: #fff;
+}
+
+/* Modal */
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.4);
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+.modal.open {
+  display: flex;
+}
+.dialog {
+  background: #fff;
+  padding: 20px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  width: 300px;
+}
