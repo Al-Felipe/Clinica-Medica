@@ -1,138 +1,166 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Meu Portal Clínica</title>
-  <meta name="description" content="Acesse o portal da clínica para agendar consultas, ver resultados de exames e falar conosco." />
-  <link rel="stylesheet" href="css/style.css" />
-</head>
-<body>
-  <!-- Cabeçalho -->
-  <header>
-    <div class="container nav">
-      <a href="#" class="brand">
-        <div class="brand-logo">🤍</div>
-        <span class="brand-name">Clínica Life </span>
-      </a>
-      <nav>
-        <ul>
-          <li><a href="#sobre">Sobre</a></li>
-          <li><a href="#contato">Contato</a></li>
-          <li><button class="cta-small" id="btnLogin">Login</button></li>
-          <li><button class="cta-small" id="btnCadastro">Cadastro</button></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Meu Portal Clínica</title>
+    <meta
+      name="description"
+      content="Acesse o portal da clínica para agendar consultas, ver resultados de exames e falar conosco."
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- Cabeçalho -->
+    <header>
+      <div class="container nav">
+        <a href="#" class="brand">
+          <div class="brand-logo">🤍</div>
+          <span class="brand-name">Clínica Life </span>
+        </a>
+        <nav>
+          <ul>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#contato">Contato</a></li>
+            <li><button class="cta-small" id="btnLogin">Login</button></li>
+            <li>
+              <button class="cta-small" id="btnCadastro">Cadastro</button>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
 
-  <!-- Hero -->
-  <section class="hero">
-    <div class="container hero-wrap">
-      <div>
-        <h1>Bem-vindo ao <br> Meu Portal Clínica</h1>
-        <p>Acompanhe seus exames, agende consultas e tenha acesso rápido às informações da sua saúde.</p>
-        <div class="hero-cta">
-          <button class="pill" id="btnAgendar">📅 Agende sua consulta</button>
-          <button class="pill">🧪 Resultados de exames</button>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container hero-wrap">
+        <div>
+          <h1>
+            Bem-vindo ao <br />
+            Meu Portal Clínica
+          </h1>
+          <p>
+            Acompanhe seus exames, agende consultas e tenha acesso rápido às
+            informações da sua saúde.
+          </p>
+          <div class="hero-cta">
+            <button class="pill" id="btnAgendar">📅 Agende sua consulta</button>
+            <button class="pill">🧪 Resultados de exames</button>
+          </div>
+        </div>
+        <div class="ill">
+          <img src="img/familiaFeliz.jpg" alt="" />
         </div>
       </div>
-      <div class="ill">
-        <img src="img/familiaFeliz.jpg" alt="">
+    </section>
+
+    <!-- Seção de Serviços -->
+    <section class="section container" id="sobre">
+      <h2>Sobre a Clínica</h2>
+      <p class="muted">
+        Excelência em atendimento médico com profissionais qualificados e
+        tecnologia de ponta.
+      </p>
+      <br />
+      <div class="grid">
+        <div class="card">
+          <h3>Consultas Online</h3>
+          <p>Agende e realize suas consultas sem sair de casa.</p>
+          <a href="#" class="btn btn-primary">Agendar</a>
+        </div>
+        <div class="card">
+          <h3>Resultados de Exames</h3>
+          <p>Acesse seus exames de forma prática e segura.</p>
+          <a href="#" class="btn btn-primary">Ver exames</a>
+        </div>
+        <div class="card">
+          <h3>Atendimento 24h</h3>
+          <p>Suporte médico e emergencial a qualquer hora.</p>
+          <a href="#contato" class="btn btn-primary">Fale conosco</a>
+        </div>
+        <div class="card">
+          <h3>Localização</h3>
+          <p>Visite nossa clínica na Rua Rio de Janeiro, 471.</p>
+          <a
+            href="https://www.google.com/maps/search/?api=1&query=Rua+Rio+de+Janeiro+471"
+            target="_blank"
+            class="btn btn-primary"
+            >Abrir no Google Maps</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- Contato -->
+    <section class="sectionContainer" id="contato">
+      <h2>Contato</h2>
+      <form id="formContato">
+        <label class="informacao"
+          >Nome:
+          <input type="text" id="nomeContato" required />
+        </label>
+        <label class="informacao"
+          >Email:
+          <input type="email" id="emailContato" required />
+        </label>
+        <label class="informacao"
+          >Mensagem:
+          <textarea id="mensagemContato" required></textarea>
+        </label>
+        <button type="submit" class="cta-small">Enviar</button>
+      </form>
+      <p id="msgContato"></p>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+      <p>&copy; 2025 Clínica Saúde+ | Todos os direitos reservados</p>
+    </footer>
+
+    <!-- Modal de Cadastro -->
+    <div class="modal" id="cadastroModal">
+      <div class="dialog">
+        <h3>Criar Conta</h3>
+        <form id="formCadastro">
+          <label
+            >Nome:
+            <input type="text" id="nomeCadastro" required />
+          </label>
+          <label
+            >Email:
+            <input type="email" id="emailCadastro" required />
+          </label>
+          <label
+            >Senha:
+            <input type="password" id="senhaCadastro" required />
+          </label>
+          <button type="submit" class="cta-small">Cadastrar</button>
+          <button type="button" id="closeCadastroModal" class="btn btn-primary">
+            Fechar
+          </button>
+        </form>
+        <p id="msgCadastro"></p>
       </div>
     </div>
-  </section>
 
-  <!-- Seção de Serviços -->
-  <section class="section container" id="sobre">
-    <h2>Sobre a Clínica</h2>
-    <p class="muted">Excelência em atendimento médico com profissionais qualificados e tecnologia de ponta.</p><br>
-    <div class="grid">
-      <div class="card">
-        <h3>Consultas Online</h3>
-        <p>Agende e realize suas consultas sem sair de casa.</p>
-        <a href="#" class="btn btn-primary">Agendar</a>
-      </div>
-      <div class="card">
-        <h3>Resultados de Exames</h3>
-        <p>Acesse seus exames de forma prática e segura.</p>
-        <a href="#" class="btn btn-primary">Ver exames</a>
-      </div>
-      <div class="card">
-        <h3>Atendimento 24h</h3>
-        <p>Suporte médico e emergencial a qualquer hora.</p>
-        <a href="#contato" class="btn btn-primary">Fale conosco</a>
-      </div>
-     <div class="card">
-      <h3>Localização</h3>
-      <p>Visite nossa clínica na Rua Rio de Janeiro, 471.</p>
-      <a href="https://www.google.com/maps/search/?api=1&query=Rua+Rio+de+Janeiro+471" target="_blank" class="btn btn-primary">Abrir no Google Maps</a>
-    </div>
-    </div>
-  </section>
-
-  <!-- Contato -->
-  <section class="sectionContainer" id="contato">
-    <h2>Contato</h2>
-    <form id="formContato">
-      <label class="informacao">Nome:
-        <input type="text" id="nomeContato"  required>
-      </label>
-      <label class="informacao">Email:
-        <input type="email" id="emailContato" required>
-      </label>
-      <label class="informacao">Mensagem:
-        <textarea id="mensagemContato" required></textarea>
-      </label>
-      <button type="submit" class="cta-small">Enviar</button>
-    </form>
-    <p id="msgContato"></p>
-  </section>
-
-  <!-- Rodapé -->
-  <footer>
-    <p>&copy; 2025 Clínica Saúde+ | Todos os direitos reservados</p>
-  </footer>
-
-  <!-- Modal de Cadastro -->
-<div class="modal" id="cadastroModal">
+    <!-- Modal de Login -->
+   <div class="modal" id="loginModal">
   <div class="dialog">
-    <h3>Criar Conta</h3>
-    <form id="formCadastro">
-      <label>Nome:
-        <input type="text" id="nomeCadastro" required>
-      </label>
+    <h3>Acessar Conta</h3>
+    <form id="formLogin">
       <label>Email:
-        <input type="email" id="emailCadastro" required>
+         <input type="text" name="usuario" required />
       </label>
       <label>Senha:
-        <input type="password" id="senhaCadastro" required>
+        <input type="password" name="senha" required />
       </label>
-      <button type="submit" class="cta-small">Cadastrar</button>
-      <button type="button" id="closeCadastroModal" class="btn btn-primary">Fechar</button>
+      <button type="submit" class="cta-small">Entrar</button>
+      <button type="button" id="closeModal" class="btn btn-primary">Fechar</button>
     </form>
-    <p id="msgCadastro"></p>
+    <p id="msgLogin"></p>
   </div>
 </div>
 
-  <!-- Modal de Login -->
-  <div class="modal" id="loginModal">
-    <div class="dialog">
-      <h3>Acessar Conta</h3>
-      <form id="formLogin">
-        <label>Email:
-           <input type="email" id="emailLogin" required>
-        </label>
-        <label>Senha:
-          <input type="password" id="senha" required>
-        </label>
-        <button type="submit" class="cta-small">Entrar</button>
-        <button type="button" id="closeModal" class="btn btn-primary">Fechar</button>
-      </form>
-      <p id="msgLogin"></p>
-    </div>
-  </div>
-
-  <script src="script.js"></script>
-</body>
+    <script src="js/loginScript.js"></script>
+  </body>
 </html>

@@ -42,7 +42,7 @@
         </p>
       </aside>
 
-      <form>
+      <form id="formAgendamento">
         <h1 class="consult">Agendamento de Consulta</h1>
         <div class="full-line">
           <label for="nome">Nome Completo</label>
@@ -76,10 +76,10 @@
 
         <div>
           <label for="genero">Gênero</label>
-          <select id="genero">
-            <option value="">Masculino</option>
-            <option value="">Feminino</option>
-            <option value="">Outro</option>
+          <select id="genero" required>
+            <option value="Masculino">Masculino</option>
+            <option value="Feminino">Feminino</option>
+            <option value="Outro">Outro</option>
           </select>
         </div>
 
@@ -88,8 +88,10 @@
           <input type="date" id="data" required />
         </div>
 
-        <button class="agendar">Agendar</button>
+        <button class="agendar" type="submit">Agendar</button>
       </form>
     </div>
+
+    <script src="js/agendamentoScript.js"></script>
   </body>
 </html>
