@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prontuário</title>
+    <link rel="stylesheet" href="css/prontuario.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="body">
+      <aside>
+        <h2>Bem vindo(a)</h2>
+        <ul>
+          <li>
+            <a href="home.html">Início <i class="bi bi-house"></i></a>
+          </li>
+          <li>
+            <a href="agendamento.html"
+              >Agendamento <i class="bi bi-calendar"></i
+            ></a>
+          </li>
+          <li>
+            <a href="prontuario.html"
+              >Prontuário <i class="bi bi-file-earmark"></i
+            ></a>
+          </li>
+          <div class="consult-container">
+            <li>
+              <a href="consulta.html">Consultas <i class="bi bi-list"></i></a>
+            </li>
+          </div>
+        </ul>
+
+        <p class="exit">
+          <a href="">Sair <i class="bi bi-box-arrow-right"></i></a>
+        </p>
+      </aside>
+
+      <main class="main-content">
+        <div class="pront-container">
+          <img
+            src="img/profile-photo.jpg"
+            alt="profile photo"
+            class="profile"
+          />
+
+          <div class="info">
+            <div class="top-text">
+              <p><strong>Nome:</strong> João Silva</p>
+              <p><strong>Profissão:</strong> Professor</p>
+              <p><strong>Data de Nascimento:</strong> 19/03/1987</p>
+            </div>
+
+            <div class="bottom-text">
+              <p><strong>Peso / Altura:</strong> 72kg / 1,70m</p>
+              <p><strong>Convênio:</strong> Bradesco Saúde</p>
+              <p><strong>Telefone:</strong> (99) 9999-9999</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="questionario">
+          <h3>Questionário Consulta</h3>
+
+          <div class="pergunta">
+            <p>Tem alergia a medicamentos?</p>
+            <label><input type="radio" name="alergia" value="sim" /> Sim</label>
+            <label><input type="radio" name="alergia" value="nao" /> Não</label>
+          </div>
+
+          <div class="pergunta">
+            <p>Sente falta de ar?</p>
+            <label
+              ><input type="radio" name="falta_ar" value="sim" /> Sim</label
+            >
+            <label
+              ><input type="radio" name="falta_ar" value="nao" /> Não</label
+            >
+          </div>
+
+          <div class="pergunta">
+            <p>Já fez cirurgia?</p>
+            <label
+              ><input type="radio" name="cirurgia" value="sim" /> Sim</label
+            >
+            <label
+              ><input type="radio" name="cirurgia" value="nao" /> Não</label
+            >
+          </div>
+
+          <button class="btn-quest">Enviar</button>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
