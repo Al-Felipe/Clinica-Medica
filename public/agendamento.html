@@ -61,7 +61,13 @@
 
         <div class="full-line">
           <label for="cpf">CPF</label>
-          <input type="text" id="cpf" placeholder="XXX.XXX.XXX-XX" required />
+          <input
+            type="text"
+            id="cpf"
+            placeholder="XXX.XXX.XXX-XX"
+            maxlength="14"
+            required
+          />
         </div>
 
         <div class="full-line">
@@ -70,6 +76,7 @@
             type="tel"
             id="telefone"
             placeholder="(99) 99999-9999"
+            maxlength="15"
             required
           />
         </div>
@@ -86,6 +93,11 @@
         <div>
           <label for="data">Data de Agendamento</label>
           <input type="date" id="data" required />
+        </div>
+
+        <div>
+          <label for="hora">Horário:</label>
+          <input type="time" id="hora" name="hora" />
         </div>
 
         <button class="agendar" type="submit">Agendar</button>

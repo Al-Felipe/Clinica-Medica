@@ -93,6 +93,6 @@ li a:hover, .exit a:hover {
     background-color: #98b4d5;
 }
 
-.border, .row {
+.border {
     border: 1px solid black;
 }
