@@ -64,7 +64,6 @@ li a:hover, .exit a:hover {
   border-collapse: collapse;
   font-family: "Montserrat", sans-serif;
   background: #fff;
-  border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   height: 200px;
@@ -92,4 +91,8 @@ li a:hover, .exit a:hover {
 
 .row {
     background-color: #98b4d5;
+}
+
+.border, .row {
+    border: 1px solid black;
 }

@@ -7,13 +7,12 @@ async function carregarConsultas() {
 
     pacientes.forEach(p => {
       const tr = document.createElement("tr");
+      tr.classList.add("border");
       tr.innerHTML = `
         <td>${new Date(p.data_de_agendamento).toLocaleDateString()}</td>
         <td>${p.nome}</td>
-        <td>${p.cpf}</td>
         <td>${p.telefone}</td>
         <td>${p.email}</td>
-        <td>${p.genero}</td>
       `;
       tabela.appendChild(tr);
     });

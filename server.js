@@ -52,7 +52,7 @@ server.post("/pacientes", async (req, res) => {
 server.get("/pacientes", async (req, res) => {
   try {
     const [rows] = await conexaoDB.execute(
-      "SELECT * FROM paciente ORDER BY data_de_agendamento DESC"
+      "SELECT * FROM paciente ORDER BY data_de_agendamento ASC"
     );
     res.json(rows);
   } catch (err) {
